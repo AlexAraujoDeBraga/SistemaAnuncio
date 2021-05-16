@@ -49,6 +49,8 @@ public class AnuncioDAO {
             while(rs.next()){
                 Anuncio anuncio = new Anuncio();
                 anuncio.setNome_anuncio(rs.getString("nome_anuncio"));
+                anuncio.setData_inicio(rs.getString("data_inicio"));
+                anuncio.setData_termino(rs.getString("data_termino"));
                 anuncio.setInvestimento_dia(rs.getDouble("investimento_dia"));
                 lista.add(anuncio);
             }

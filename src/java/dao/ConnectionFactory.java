@@ -12,7 +12,7 @@ public class ConnectionFactory {
     public Connection getConexao(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost/sistema_anuncio", "root", "root");
+            return DriverManager.getConnection("jdbc:mysql://localhost/sis_anuncio", "root", "root");
         } catch (Exception erro) {
             throw new RuntimeException("Erro 1:" + erro);
         }
