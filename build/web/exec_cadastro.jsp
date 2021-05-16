@@ -8,10 +8,10 @@
 <%@page import="model.Anuncio"%>
 <%@page import="dao.AnuncioDAO"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sistema Aúncio - Cadastro</title>
+        <meta charset="utf-8">
+        <title>Sistema Anúncio - Cadastro</title>
     </head>
     <body>
         <h1>Sistema Anúncio - Cadastro</h1>
@@ -28,7 +28,7 @@
                  aDAO.inserir(a);
                  response.sendRedirect("index.jsp");
             } catch (Exception erro) {
-                throw new RuntimeException("Erro 3:" + erro);
+                throw new RuntimeException("Erro 4:" + erro);
             }
         %>
         

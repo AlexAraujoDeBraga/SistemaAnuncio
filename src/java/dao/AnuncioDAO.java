@@ -9,12 +9,14 @@ import model.Anuncio;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class AnuncioDAO {
     
     private Connection conn;
     private PreparedStatement stmt;
+    private Statement st;
     private ResultSet rs;
     private ArrayList<Anuncio> lista = new ArrayList<>();
     
@@ -38,6 +40,25 @@ public class AnuncioDAO {
             throw new RuntimeException("Erro 2:" + erro);
         }
     }
+    
+    public ArrayList<Anuncio> listarNomeAnuncio(String valor){
+        String sql = "SELECT * FROM anuncio WHERE nome_anuncio LIKE '%"+valor+"%'";
+        try {
+            st = conn.createStatement();
+            rs = st.executeQuery(sql);
+            while(rs.next()){
+                Anuncio anuncio = new Anuncio();
+                anuncio.setNome_anuncio(rs.getString("nome_anuncio"));
+                anuncio.setInvestimento_dia(rs.getDouble("investimento_dia"));
+                lista.add(anuncio);
+            }
+        } catch (Exception erro) {
+            throw new RuntimeException("Erro 3:" + erro);
+        }
+        return lista;
+    }
+    
+    
     
     
     

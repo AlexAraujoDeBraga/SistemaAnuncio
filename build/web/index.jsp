@@ -5,13 +5,24 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="model.Anuncio"%>
+<%@page import="dao.AnuncioDAO"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Sistema Anúncio</title>
     </head>
     <body>
-        <h1>Cadastrado com sucesso</h1>
+        <form action="consultar.jsp" method="post">
+            <label>Digite o nome do Anúncio:</label><br>
+            <input type="text" value="" name="nome_anuncio" placeholder="..."/>
+            <button type="submit">Pesquisar</button>
+        </form>
+        <br>
+        
+        <a href="cadastro.jsp"><button>Cadastrar Anúncio</button></a>
+        
     </body>
 </html>

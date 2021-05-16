@@ -46,12 +46,13 @@ public class Anuncio {
     }
 
     public double getInvestimento_dia() {
-        return investimento_dia;
+        return investimento_dia*2;
     }
 
     public void setInvestimento_dia(double investimento_dia) {
         this.investimento_dia = investimento_dia;
     }
+
     
     
     
