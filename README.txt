@@ -1,3 +1,5 @@
+Projeto web java com jsp - Sistema Anúncio
+
 - Programas Utilizados:
 Servidor: apache-tomcat-8.5.15
 IDE: Netbeans 8.2
@@ -8,7 +10,8 @@ Caminho se for no Netbeans: Pacotes de Códigos-fonte->dao->ConnectionFactory.ja
 Caminho se for na pasta raiz do projeto no Windows: SistemaAnuncio\src\java\dao\ConnectionFactory.java
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-- Ao importar projeto, iniciar servidor tomcat e depois rodar a aplicação na função ou abrir uma das URL abaixo:
+- Ao importar projeto, iniciar servidor tomcat e depois rodar a aplicação no F6(se for no netbeans) 
+ou abrir uma das URL abaixo:
 
 http://localhost:8080/SistemaAnuncio/
 http://localhost:8080/SistemaAnuncio/index.jsp
@@ -19,7 +22,7 @@ http://localhost:8080/SistemaAnuncio/cadastro.jsp -> página para cadastrar anú
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Banco de Dados 
 
-o arquivo sis_anuncio_anuncio.sql é o import do meu banco caso queira usar mysql, mas se não quiser usar pode
+o arquivo sis_anuncio_anuncio.sql é o import do meu banco caso queira importar, se não pode
 gerar um novo banco conforme abaixo:
 
 Criando banco de dados:
