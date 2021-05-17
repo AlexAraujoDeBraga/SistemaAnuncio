@@ -101,7 +101,8 @@ public class Anuncio {
     public double getInvestimento_dia() { 
         return investimento_dia;
     }
-    
+    //função para pegramos intervalo de datas para que depois multiplicamos o numero de dias pelo valor investido
+    // assim saberemos quantas pessoas por dia virão o anuncio juntando quem viu o principal e quem os compartilhados
     public int retornaDias(String data_start, String data_end){
         
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
@@ -117,10 +118,12 @@ public class Anuncio {
         
         return dias;
     }
-    
+    //função para calcularmos quantas pessoas verão o anúncio juntando quem viu o origial e compartilhamentos
     public String retornaCalculo(Double valor, int dias_calculo){
         String retorno = "";
-        
+        //dias calculo e da outra função
+        // com o intervalo de datas multiplicamos o numero de dias pelo valor investido
+       //assim saberemos quantas pessoas por dia virão o anuncio juntando quem viu o principal e quem os compartilhado
         valor_investido = valor * dias_calculo;
         //chamando função para saber quantidade de pessoas que verão o anúncio pelo valor investido
         resultado_invest = resultado_invest(valor_investido);
@@ -134,14 +137,16 @@ public class Anuncio {
         resultado_mais_pessoas = calculadora_mais_p(resultado_compartilhamento);
 
         resultado_invest = resultado_mais_pessoas;
-        soma_pessoas = soma_pessoas + resultado_mais_pessoas;
-        soma_cliques = soma_cliques + resultado_cliques;
-        soma_compart = soma_compart + resultado_compartilhamento;
         
+        if(resultado_invest >= 0){
+            soma_pessoas = soma_pessoas + resultado_mais_pessoas;
+            soma_cliques = soma_cliques + resultado_cliques;
+            soma_compart = soma_compart + resultado_compartilhamento;
+        }
         }
         
         retorno = "<br> Nome do Anúncio: <strong>" +nome_anuncio+  
-                "</strong><br> Investimento total :<strong>" + valor_investido + " R$, <br>"
+                "</strong><br> Investimento total :<strong>" + valor_investido + " R$ <br>"
                 + "</strong> Quantidade Máxima de Visualizações: <strong>" + soma_pessoas + "</strong><br>"
                 + " Quantidade Máxima de Cliques: <strong>" + soma_cliques + "</strong>"
                 + "<br> Quantidade Máxima de Compartilhamentos: <strong>" + soma_compart + "</strong>";
@@ -154,13 +159,5 @@ public class Anuncio {
     }
 
     
-    /*
-    
-    valor total investido
-    quantidade máxima de visualizações
-    quantidade máxima de cliques
-    quantidade máxima de compartilhamentos
-    
-    */
     
 }

@@ -9,19 +9,22 @@
 <%@page import="dao.AnuncioDAO"%>
 <%@page import="java.util.ArrayList"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
         <title>Sistema Anúncio</title>
     </head>
     <body>
+        <h1>Sistema Anúncio - Home</h1>
+        <br>
         <form action="consultar.jsp" method="post">
             <label>Digite o nome do Anúncio:</label><br>
             <input type="text" value="" name="nome_anuncio" placeholder="..."/>
             <button type="submit">Pesquisar</button>
         </form>
+        <hr>
         <br>
-        
+        <br>
         <a href="cadastro.jsp"><button>Cadastrar Anúncio</button></a>
         
     </body>

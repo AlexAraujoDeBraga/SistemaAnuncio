@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectionFactory {
+    //conexão com banco de dados, meu usuario root e senha root
     public Connection getConexao(){
         try {
             Class.forName("com.mysql.jdbc.Driver");

@@ -23,7 +23,7 @@ public class AnuncioDAO {
     public AnuncioDAO(){
         conn = new ConnectionFactory().getConexao();
     }
-    
+    //função para inserir dados no banco
     public void inserir(Anuncio anuncio){
         String sql = "INSERT INTO anuncio (nome_anuncio, cliente, data_inicio, data_termino, investimento_dia) "
                      + "VALUES (?,?,?,?,?)";
@@ -40,7 +40,7 @@ public class AnuncioDAO {
             throw new RuntimeException("Erro 2:" + erro);
         }
     }
-    
+    // função para listar anúncios conforme o valor que será o nome
     public ArrayList<Anuncio> listarNomeAnuncio(String valor){
         String sql = "SELECT * FROM anuncio WHERE nome_anuncio LIKE '%"+valor+"%'";
         try {

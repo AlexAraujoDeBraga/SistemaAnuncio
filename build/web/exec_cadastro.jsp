@@ -16,7 +16,7 @@
     <body>
         <h1>Sistema Anúncio - Cadastro</h1>
         
-        <%
+        <%  // pegamos os dados do furmulario e chamamos função inerir de anuncioDao.java para salvar no banco
             try {
                  Anuncio a = new Anuncio();
                  AnuncioDAO aDAO = new AnuncioDAO();

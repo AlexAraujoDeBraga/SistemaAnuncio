@@ -1,5 +1,7 @@
+Criação do Banco de Dados
 CREATE DATABASE sis_anuncio CHARACTER SET utf8 COLLATE utf8_swedish_ci;
 
+Criação da Tabela do Banco de Dados
 CREATE TABLE anuncio (nome_anuncio varchar(200) NOT NULL, cliente varchar(200) NOT NULL, 
                                              data_inicio varchar(10) NOT NULL, data_termino varchar(10) NOT NULL, 
                                              investimento_dia DOUBLE NOT NULL);
